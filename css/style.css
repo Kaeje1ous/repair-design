@@ -366,10 +366,17 @@ template {
 
 .button--primary {
   background-color: #E3B873;
-  color: #fff;
+  color: #ffffff;
+}
+
+.button--outline {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .container {
+  width: 85%;
   max-width: 1256px;
   margin: auto;
 }
@@ -403,7 +410,7 @@ template {
 
 .nav__item {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   margin-right: 40px;
 }
@@ -417,9 +424,20 @@ template {
 }
 
 .hero {
-  padding-top: 100px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-display: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 100px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  color: #ffffff;
   height: 100vh;
 }
 
@@ -428,6 +446,40 @@ template {
   left: 0;
   top: 0;
   max-width: 82px;
+}
+
+.hero__scroll-down {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  bottom: 0;
+  min-width: 247px;
+  min-height: 97px;
+  background-color: #131313;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero__content {
+  max-width: 670px;
+}
+
+.hero__text {
+  font-size: 22px;
+  max-width: 500px;
+}
+
+.hero__button {
+  margin-right: 20px;
 }
 
 .instagram {
@@ -453,7 +505,14 @@ template {
 }
 
 .title {
+  font-family: 'Yeseva One', cursive;
   margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.title--primary {
+  color: #E3B873;
 }
 
 *, *:before, *:after {
