@@ -1,0 +1,20 @@
+*, *:before, *:after
+  box-sizing: border-box
+body 
+  font-family: 'Futura Book', sans-serif
+  font-size: 14px
+.section
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Yeseva One', sans-serif
+    &__image
+      &::after, &::before
+        content: ''
+        vertical-align: text-top
+        margin: 0 10px
+        display: inline-block
+        width: 32px
+        height: 2px
+        background-color: $primary
+        
