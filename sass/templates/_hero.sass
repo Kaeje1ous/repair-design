@@ -18,6 +18,7 @@
    background-color: rgba($dark, 0.7)
   &__instagram
     position: absolute
+    font-size: 1.1rem
     left: 0
     top: 0
     max-width: 82px
@@ -49,8 +50,12 @@
   &__text
     font-size: 1.57rem
     max-width: 500px
+    line-height: 131%
+    margin: 0
+    margin-bottom: 3rem
   &__button
     margin-right: 20px
+    padding: 20px 35px
 .instagram 
   display: flex
   justify-content: center
@@ -60,11 +65,12 @@
   &__link
      display: flex
      align-items: center
-     line-height: 0.7
+     line-height: 0.8
      text-transform: uppercase
      color: $primary
      text-decoration: none
      transform: rotate(90deg)
+     font-size: 1.1rem
      &::after
        content: ''
        width: 50px
@@ -74,7 +80,9 @@
 .title
   font-family: 'Yeseva One', cursive
   margin: 0
+  line-height: 1.4
   text-transform: uppercase
+  margin-bottom: 1rem
   font-size: 2.857rem
   &--primary
     color: $primary
