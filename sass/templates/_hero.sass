@@ -16,6 +16,15 @@
    width: 100%
    height: 100%
    background-color: rgba($dark, 0.7)
+  &::after
+    content: ''
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 3.46rem
+    background-color: $dark
   &__instagram
     position: absolute
     font-size: 1.1rem
@@ -25,6 +34,7 @@
   &__scroll-down
     position: absolute
     display: flex
+    z-index: 3
     justify-content: center
     align-items: center
     left: 0
