@@ -1,0 +1,42 @@
+.swiper
+  &-slide
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 7rem
+    &__text
+      flex-basis: 50%
+    &__heading
+      font-family: 'Yeseva One', cursive
+      font-size: 1.285rem
+      line-height: 1.78rem
+      color: $primary
+      text-transform: uppercase
+    &__value
+      font-size: 1.07rem
+    &__word
+      display: block
+      margin-top: 0.5rem
+  &-pagination
+    &-bullets
+      width: auto
+    &-bullet
+      background-color: rgba($light, 0.3)
+      &-active
+        background-color: $light
+  &-button
+    &-prev, &-next
+      bottom: 0
+      top: auto
+      background-size: 42px
+      width: 42px
+      height: 14px
+      &::after
+        display: none
+    &-prev
+       background: url('../img/arrow-prev.svg') no-repeat center
+       left: 0
+    &-next
+       background: url('../img/arrow-next.svg') no-repeat center
+.swiper-container-horizontal>.swiper-pagination-bullets
+  width: auto
+  bottom: 0
