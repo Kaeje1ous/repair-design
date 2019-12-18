@@ -13,9 +13,9 @@ $(document).ready(function () {
           prevEl: '.swiper-button-prev',
         },
       }),
-      next = $('.swiper-button-next')
-      prev = $('.swiper-button-prev')
-      bullets = $('.swiper-pagination')
+      next = $('.swiper-button-next');
+      prev = $('.swiper-button-prev');
+      bullets = $('.swiper-pagination');
       
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -25,6 +25,8 @@ $(document).ready(function () {
   });
   next.css('left', prev.width() + 30 + bullets.width() + 30 );
   bullets.css('left', prev.width() + 30  );
+
+  new WOW().init();
 });
 
 
