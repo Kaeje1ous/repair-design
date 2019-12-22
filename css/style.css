@@ -456,6 +456,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.142rem;
 }
 
 .policy__label::before {
@@ -465,6 +466,12 @@ template {
   border: 1px solid #E3B873;
   border-radius: 1px;
   margin-right: 0.64rem;
+}
+
+.policy__label--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container {
@@ -850,6 +857,10 @@ img {
   margin-bottom: 2.21rem;
   margin-top: -30rem;
   color: #ffffff;
+}
+
+.control__section-title__heading {
+  font-style: normal;
   font-weight: normal;
 }
 
@@ -921,9 +932,88 @@ img {
   padding: 1.214rem 2.6rem;
 }
 
+.design {
+  padding-bottom: 30rem;
+}
+
 .design__section-title {
   margin-bottom: 2.78rem;
   margin-top: 7rem;
+}
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem;
+}
+
+.footer__wrap {
+  background-color: #181818;
+  max-width: 63.1rem;
+  margin: auto;
+  margin-top: -20rem;
+  margin-bottom: 3.714rem;
+  padding: 2.5rem 12.9rem;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.428rem;
+  margin-bottom: 3.2rem;
+  margin-top: 0;
+}
+
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__input {
+  padding-top: 0.3rem;
+}
+
+.footer__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin-bottom: 3.2rem;
+}
+
+.footer__input-group--full-width {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+
+.footer__policy {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 3.57rem;
+}
+
+.footer__button {
+  margin: auto;
+  padding: 1.285rem 4.785rem;
+}
+
+.footer__menu {
+  background-color: #131313;
+  padding: 4.285rem 0rem;
 }
 
 .modal {
@@ -982,6 +1072,8 @@ img {
   margin-bottom: 2.428rem;
   max-width: 25.85rem;
   line-height: 26px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .modal__form {
