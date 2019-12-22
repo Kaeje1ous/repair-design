@@ -1017,6 +1017,7 @@ img {
 }
 
 .modal {
+  color: #ffffff;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1086,7 +1087,14 @@ img {
           flex-direction: column;
 }
 
-.modal__input {
+.modal__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 3.428rem;
 }
 
@@ -1101,6 +1109,14 @@ img {
 .modal__button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+label.invalid {
+  color: tomato;
+}
+
+input.invalid {
+  border-bottom: 1px solid tomato;
 }
 
 .projects {

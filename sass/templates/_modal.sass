@@ -1,4 +1,5 @@
 .modal
+  color: $light
   opacity: 0
   visibility: hidden
   position: fixed
@@ -46,12 +47,17 @@
     display: flex
     flex-direction: column
   &__input
-    margin-bottom: 3.428rem
+    &-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 3.428rem
     &:last-of-type
       margin-bottom: 1.1rem
   &__policy
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
-
-  
+label.invalid
+  color: tomato
+input.invalid
+  border-bottom: 1px solid tomato
