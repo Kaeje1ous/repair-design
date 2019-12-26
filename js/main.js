@@ -35,7 +35,8 @@ $(document).ready(function () {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required",
       // compound rule
@@ -46,19 +47,20 @@ $(document).ready(function () {
     },
     messages: {
       userName: {
-        required: "Имя обязательно",
-        minlength: "Не менее 2 символов"
+        required: "Заполните поле",
+        minlength: "Не менее 2 символов",
+        maxlength: "Не более 15 символов"
       },
-      userPhone: "Телефон обязателен",
+      userPhone: "Заполните поле",
       userEmail: {
-        required: "Email обязателен",
-        email: "Введите в формате: name@domain.com"
+        required: "Заполните поле",
+        email: "Введите корректный email"
       },
     }
 
   });
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 });
 
