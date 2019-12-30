@@ -62,6 +62,41 @@ $(document).ready(function () {
   // маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+  // yandex maps
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [47.244734, 39.723227],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './img/pin.svg',
+            // Размеры метки.
+            iconImageSize: [32, 32],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+
+    myMap.geoObjects
+        .add(myPlacemark);
+});
 });
 
 
