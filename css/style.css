@@ -445,8 +445,8 @@ template {
   visibility: hidden;
 }
 
-.policy__checkbox:checked + .policy__label::before {
-  background: #E3B873 url(../img/check.svg) no-repeat center/0.8rem;
+.policy__checkbox::checked + .policy__label::before {
+  background: #E3B873 url(./img/check.svg) no-repeat center/0.8rem;
 }
 
 .policy__label {
@@ -465,6 +465,7 @@ template {
   height: 18px;
   border: 1px solid #E3B873;
   border-radius: 1px;
+  cursor: pointer;
   margin-right: 0.64rem;
 }
 
