@@ -38,21 +38,20 @@
   &__checkbox
     opacity: 0
     visibility: hidden
-    &::checked +
-      .policy__label
-        &::before
-          background: $primary url(./img/check.svg) no-repeat center / 0.8rem
+    &:checked + .policy__label
+      &::before
+        background: $primary url(../img/check.svg) no-repeat center / 0.8rem
   &__label
     display: flex
     align-items: center
     font-size: 1.142rem
     &::before
-     content: ''
-     width: 18px
-     height: 18px
-     border: 1px solid $primary 
-     border-radius: 1px
-     cursor: pointer
-     margin-right: 0.64rem
+      content: ''
+      width: 18px
+      height: 18px
+      border: 1px solid $primary 
+      border-radius: 1px
+      cursor: pointer
+      margin-right: 0.64rem
     &--center
       justify-content: center
