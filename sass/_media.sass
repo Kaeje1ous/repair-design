@@ -42,6 +42,35 @@
   .row
     flex-direction: column
     align-items: center
+  .control
+   background-color: $dark
+   color: $light
+   &__label
+     color: $secondary
+     padding-bottom: 0.5rem
+   &__button
+     margin: auto
+     flex-basis: 100%
+     margin-bottom: -6rem
+     order: 5
+   &__input-group
+    flex-basis: 100%
+    margin-bottom: 4.5rem
+   &__policy
+    margin-top: -4rem
+    &-label
+      justify-content: flex-start
+  .input
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
+    font-size: 1.285rem
+    color: $light
+    padding: 0.5rem 0
+    &--dark
+      &::placeholder
+        font-size: 1.4rem
+        color: $light
   .types
     &__card
       margin-bottom: 4.29rem
@@ -56,7 +85,43 @@
         max-width: 21.86rem
     &__card
       margin-bottom: 5.7rem
+  .swiper
+    &-slide
+      &__text
+        margin-bottom: 1.92rem
+    &-slider
+      &-image
+        margin-top: 0
+  .mobile-order-top
+    order: -1
+  .col-50
+    width: 100%
+  .section
+    &-title
+      &__text
+        display: flex
+        font-size: 1rem
+        text-align: center
+        line-height: 158%
+        max-width: 21.43rem
+        margin: auto
+        margin-bottom: 2.57rem
+        justify-content: center
+      &__word
+        display: flex
+        justify-content: center
+        &::after
+         display: none 
+      &__heading
+        &--primary
+          font-size: 2rem
+          line-height: 138%
+          display: flex
+          text-align: center
+          flex-direction: column
 
 
+ 
+  
 
   

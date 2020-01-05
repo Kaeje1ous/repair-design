@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <title>Repair Design</title>
 </head>
 <body>
   <header class="header">
@@ -52,17 +52,16 @@
 
     <section class="section section--dark projects">
       <div class="container">
+        <div class="section-title section-title--left wow fadeInLeft">
+          <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
+          <!-- /.section-title__heading -->
+          <p class="section-title__text">
+            На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей  
+          </p>
+          <!-- /.section-title__text -->
+        </div>
       <div class="row">
         <div class="col-50">
-          <div class="section-title section-title--left wow fadeInLeft">
-            <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
-            <!-- /.section-title__heading -->
-            <p class="section-title__text">
-              На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей  
-            </p>
-            <!-- /.section-title__text -->
-          </div>
-          <!-- /.section-title -->
           <!-- Slider main container -->
           <div class="swiper-container wow fadeInLeft" data-wow-delay="0.3s">
             <!-- Additional required wrapper -->
@@ -144,29 +143,30 @@
           </div>
         </div>
         <!-- /.col-50 -->
-        <div class="col-50">
-          <div class="swiper-container">
+        <div class="col-50 mobile-order-top">
+          <div class="swiper-container swiper-slider-image">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper swiper-no-swiping wow fadeInRight">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="./img/img_slide.jpg" alt="image">
-                </div>
-                <div class="swiper-slide">
-                  <img src="./img/img_slide.jpg" alt="image">
-                </div>
-                <div class="swiper-slide">
-                  <img src="./img/img_slide.jpg" alt="image">
-                </div>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./img/img_slide.jpg" alt="image">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/img_slide.jpg" alt="image">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/img_slide.jpg" alt="image">
+            </div>
         </div>
         </div>
         <!-- /.col-50 -->
       </div>
       <!-- /.row -->
       </div>
+    </div>
       <!-- /.container -->
     </section>
-    <!-- /.section section--dark projects -->
+
     <section class="section control">
       <div class="container">
         <div class="section-title control__section-title">
@@ -185,7 +185,7 @@
         <p class="control__text">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form action="#" class="form control__form">
+        <form action="send.php" class="form control__form">
           <div class="control__input-group">
             <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:">
@@ -196,9 +196,9 @@
             <input type="tel" class="input form__input control__input input--dark" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
 
-          <button class="button control__button button--primary">Отправить</button> <!-- /.button control__button button--primary -->
+          <button class="button control__button button--primary">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="control-policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="policy-checkbox" id="control-policy-checkbox" class="policy__checkbox control" checked>
             <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
@@ -464,7 +464,7 @@
             <label for="footer-policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
-          <button class="button footer__button button--primary">Отправить</button> <!-- /.button footer__button button--primary -->
+          <button class="button footer__button button--primary">Отправить</button>
         </form>
       </div>
       <!-- /.footer-wrap -->
@@ -506,7 +506,6 @@
     </div>
     <!-- /.footer__menu -->
   </footer>
-  <!-- /.section footer section--dark -->
 
   <div class="modal">
     <div class="modal__dialog">
@@ -535,7 +534,7 @@
           <label for="modal-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button modal__button button--primary">Отправить заявку</button> <!-- /.button modal__button button--primary -->
+        <button class="button modal__button button--primary">Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
     </div>
@@ -547,7 +546,7 @@
   <script src=".//js/wow.min.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=fb6ff9c2-4493-4bca-bfb9-f53626301af3&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fb6ff9c2-4493-4bca-bfb9-f53626301af3&lang=ru_RU"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
