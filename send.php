@@ -3,6 +3,7 @@
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
+$userMsg = $_POST['userMsg'];
 
 // Load Composer's autoloader
 require './phpmailer/Exception.php';
@@ -19,7 +20,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'quiz.send.post@gmail.com';                     // SMTP username
-    $mail->Password   = 'lots0212g';                               // SMTP password
+    $mail->Password   = 'db7153cd';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
@@ -29,7 +30,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
+    $mail->Body = "Имя пользователя: ${userName}, телефон пользователя: ${userPhone}, почта пользователя: ${userEmail}, сообщение пользователя: ${userMsg}";
 
     if ($mail->send()) {
         echo "ok";

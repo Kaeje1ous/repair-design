@@ -73,7 +73,7 @@ $(document).ready(function () {
   });
 
   // маска для телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7(999) 999-99-99', {placeholder: "+7 (999) 999-99-99"});
 
   // yandex maps
 
@@ -112,5 +112,81 @@ $(document).ready(function () {
 });
 });
 
+$('.control__form').validate({
+  errorClass: "invalid",
+  rules: {
+
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    userEmail: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Не менее 2 символов",
+      maxlength: "Не более 15 символов"
+    },
+    userPhone: "Заполните поле"
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        console.log('Ajax сработал. Ответ сервера: ' + response);
+        alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+        $(form)[0].reset();
+      }
+    });
+  }
+});
+
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userPhone: "required",
+    userMsg: {
+      required: true,
+      maxlength: 50
+    }
+  },
+  messages: {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Не менее 2 символов",
+      maxlength: "Не более 15 символов"
+    },
+    userPhone: "Заполните поле",
+    userMsg: {
+      required: "Заполните поле",
+      maxlength: "Не более 15 символов"
+    }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        console.log('Ajax сработал. Ответ сервера: ' + response);
+        alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+        $(form)[0].reset();
+      }
+    });
+  }
+});
 
 
