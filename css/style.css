@@ -959,13 +959,12 @@ img {
   background: rgba(19, 19, 19, 0.9);
 }
 
-.footer__content {
-  margin-right: 14px;
+.footer__text {
   margin-bottom: 2.8rem;
 }
 
 .footer__subtitle {
-  max-width: 560px;
+  max-width: 35.714rem;
   position: relative;
   margin: auto;
   font-family: 'Yeseva One', cursive;
@@ -1371,11 +1370,81 @@ input.invalid {
   .types__card {
     margin-bottom: 4.29rem;
   }
+  .footer {
+    background: #131313;
+  }
+  .footer__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.285rem;
+    color: #ffffff;
+    padding: 0.5rem 0;
+  }
+  .footer__subtitle {
+    font-size: 1.28rem;
+    max-width: 23rem;
+    line-height: 138.6%;
+  }
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__menu {
+    visibility: collapse;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__title {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+  }
+  .footer__map {
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .footer__wrap {
+    width: 100%;
+    background: #131313;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__policy {
+    margin-top: -1rem;
+  }
+  .footer__button {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0;
+    margin-bottom: 3.28rem;
+  }
+  .policy__label--center {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .card__text {
     margin-left: 0;
   }
   .design {
     background-color: #131313;
+    padding-bottom: 0;
   }
   .design__section-title {
     color: #ffffff;
