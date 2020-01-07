@@ -1296,6 +1296,10 @@ input.invalid {
   .nav {
     display: none;
   }
+  .nav__item:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .hero__instagram {
     display: none;
   }
@@ -1464,6 +1468,7 @@ input.invalid {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin: 0;
+    margin-top: 2rem;
     margin-bottom: 3.28rem;
   }
   .policy__label--center {
@@ -1476,10 +1481,12 @@ input.invalid {
   }
   .design {
     background-color: #131313;
+    padding-top: 2rem;
     padding-bottom: 0;
   }
   .design__section-title {
     color: #ffffff;
+    margin-top: 1rem;
   }
   .design__section-title__description {
     max-width: 21.86rem;
