@@ -31,8 +31,21 @@ $(document).ready(function () {
   // Валидация формы
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorPlacement: function(error, element) {
+      if (element.attr("name") == "modalCheckbox") {
+//Здесь пиши любые операции если чекбокс не отмечен
+          error.insertAfter(element.parent());
+      } else {
+          error.insertAfter(element);
+      }
+      return true;
+  },
+  ignore: ":disabled",
     rules: {
       // simple rule, converted to {required:true}
+      modalCheckbox: {
+        required: true
+      },
       userName: {
         required: true,
         minlength: 2,
@@ -46,6 +59,9 @@ $(document).ready(function () {
       }
     },
     messages: {
+      modalCheckbox: {
+        required: "Необходимо пользовательское соглашение"
+      },
       userName: {
         required: "Заполните поле",
         minlength: "Не менее 2 символов",
@@ -114,8 +130,20 @@ $(document).ready(function () {
 
 $('.control__form').validate({
   errorClass: "invalid",
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "controlCheckbox") {
+//Здесь пиши любые операции если чекбокс не отмечен
+        error.insertAfter(element.parent());
+    } else {
+        error.insertAfter(element);
+    }
+    return true;
+},
+  ignore: ":disabled",
   rules: {
-
+    controlCheckbox: {
+      required: true
+    },
     userName: {
       required: true,
       minlength: 2,
@@ -128,6 +156,9 @@ $('.control__form').validate({
     }
   },
   messages: {
+    controlCheckbox: {
+      required: "Необходимо пользовательское соглашение"
+    },
     userName: {
       required: "Заполните поле",
       minlength: "Не менее 2 символов",
@@ -151,7 +182,19 @@ $('.control__form').validate({
 
 $('.footer__form').validate({
   errorClass: "invalid",
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "footerCheckbox") {
+//Здесь пиши любые операции если чекбокс не отмечен
+        error.insertAfter(element.parent());
+    } else {
+        error.insertAfter(element);
+    }
+    return true;
+},
   rules: {
+    footerCheckbox: {
+      required: true
+    },
     userName: {
       required: true,
       minlength: 2,
@@ -164,6 +207,9 @@ $('.footer__form').validate({
     }
   },
   messages: {
+    footerCheckbox: {
+      required: "Необходимо пользовательское соглашение"
+    },
     userName: {
       required: "Заполните поле",
       minlength: "Не менее 2 символов",
