@@ -1094,11 +1094,110 @@ label.invalid {
   padding: 4.285rem 0rem;
 }
 
-.footer__map {
+.ymap-container {
+  position: relative;
   margin: auto;
   margin-bottom: 4rem;
   min-height: 33.214rem;
   max-width: 66.07rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/yandex-before-load-marker.png") #ffffff no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
+}
+
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  width: 66.07rem;
+  height: 33.214rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  -webkit-transition: opacity .7s ease;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.loader:after,
+.loader:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.loader.is-active {
+  top: 0;
+  opacity: 1;
+}
+
+.loader-default:after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal {
@@ -1440,12 +1539,6 @@ input.invalid {
     font-size: 1.6rem;
     margin-bottom: 4rem;
   }
-  .footer__map {
-    width: 100%;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
   .footer__wrap {
     width: 100%;
     background: #131313;
@@ -1475,6 +1568,12 @@ input.invalid {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .ymap-container {
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   .card__text {
     margin-left: 0;
