@@ -839,13 +839,14 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 1rem;
 }
 
 .control__text {
   max-width: 40.78rem;
   text-align: center;
   font-size: 1.43rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 2.429rem;
   margin: auto;
   margin-bottom: 4.28rem;
@@ -904,14 +905,8 @@ input.invalid {
 }
 
 label.invalid {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: inherit;
   margin-top: 0.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .types__section-title {
@@ -931,6 +926,8 @@ label.invalid {
 
 .card__title {
   font-family: Yeseva One, cursive;
+  font-style: normal;
+  font-weight: normal;
   margin-top: 0;
   font-size: 1.29rem;
   margin-bottom: 0.7rem;
@@ -1045,6 +1042,7 @@ label.invalid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: auto;
 }
 
 .footer__input {
@@ -1083,9 +1081,19 @@ label.invalid {
 }
 
 .footer__button {
-  margin: auto;
-  margin-top: 3rem;
   padding: 1.285rem 4.785rem;
+}
+
+.footer__button-wrap {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
 }
 
 .footer__menu {
@@ -1331,6 +1339,8 @@ input.invalid {
   font-family: 'Yeseva One', cursive;
   font-size: 1.285rem;
   line-height: 1.78rem;
+  font-style: normal;
+  font-weight: normal;
   color: #E3B873;
   text-transform: uppercase;
 }
@@ -1557,6 +1567,11 @@ input.invalid {
   .footer__policy {
     margin-top: -1rem;
   }
+  .footer__policy-label {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .footer__button {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1644,5 +1659,8 @@ input.invalid {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  label.invalid {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
 }
-/*# sourceMappingURL=style.css.map */

@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Repair Design</title>
 </head>
@@ -40,11 +39,11 @@
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title wow fadeInRight">Турецкий ремонт 
+          <h1 class="title hero__title">Турецкий ремонт 
             в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
-          <p class="hero__text wow fadeInRight">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации  работы</p>
-          <button class="button hero__button button--primary  wow fadeInRight" data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow fadeInRight">Отправить заявку</button>
+          <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации  работы</p>
+          <button class="button hero__button button--primary " data-toggle="modal">Рассчитать стоимость</button>
+          <button class="button hero__button button--outline">Отправить заявку</button>
         </div>
       </div>
       <a href="#" class="hero__scroll-down">Листайте вниз</a>
@@ -63,7 +62,7 @@
       <div class="row">
         <div class="col-50">
           <!-- Slider main container -->
-          <div class="swiper-container wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper swiper-no-swiping">
                 <!-- Slides -->
@@ -146,7 +145,7 @@
         <div class="col-50 mobile-order-top">
           <div class="swiper-container swiper-slider-image">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper swiper-no-swiping wow fadeInRight">
+            <div class="swiper-wrapper swiper-no-swiping">
             <!-- Slides -->
             <div class="swiper-slide">
               <img src="./img/img_slide.jpg" alt="image">
@@ -463,7 +462,9 @@
             <input type="checkbox" name="footerCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
             <label for="footer-policy-checkbox" class="policy__label footer__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
-          <button class="button footer__button button--primary">Отправить</button>
+          <div class="footer__button-wrap">
+            <button class="button footer__button button--primary">Отправить</button>
+          </div>
           <!-- /.policy -->
         </form>
       </div>
@@ -479,7 +480,7 @@
             <a href="#" class="footer__link"><img src="./img/icon-2.png" alt=""></a>
           </div>
         </div>
-        <div class="ymap-container footer__map">
+        <div class="ymap-container">
           <div class="loader loader-default"></div>
           <div id="map-yandex"></div>
       </div>

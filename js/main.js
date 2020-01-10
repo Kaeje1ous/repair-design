@@ -209,6 +209,7 @@ function init () {
   var myMapTemp = new ymaps.Map("map-yandex", {
     center: [47.244734, 39.723227], // координаты центра на карте
     zoom: 17, // коэффициент приближения карты
+    controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
   var myPlacemarkTemp = new ymaps.Placemark([47.244734, 39.723227], {
       balloonContent: "Здесь может быть ваш адрес",
@@ -224,7 +225,6 @@ function init () {
       // её "ножки" (точки привязки).
       iconImageOffset: [-25, -50],
   });
-
   myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
  
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
@@ -236,7 +236,7 @@ function init () {
     spinner.removeClass('is-active');
   });
 }
-
+ 
 // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
 function waitForTilesLoad(layer) {
   return new ymaps.vow.Promise(function (resolve, reject) {
@@ -304,7 +304,7 @@ var ymap = function() {
         spinner.addClass('is-active');
  
 		// Загружаем API Яндекс.Карт
-        loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
+        loadScript("https://api-maps.yandex.ru/2.1/?apikey=fb6ff9c2-4493-4bca-bfb9-f53626301af3&lang=ru_RU", function(){
            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
            ymaps.load(init);
         });                
@@ -319,7 +319,6 @@ $(function() {
   ymap();
  
 });
-myMapTemp.behaviors.disable(['drag','dblClickZoom','multiTouch']);
 
 
 
