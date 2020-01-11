@@ -225,6 +225,8 @@ function init () {
       // её "ножки" (точки привязки).
       iconImageOffset: [-25, -50],
   });
+  myMapTemp.behaviors.disable('scrollZoom');
+  myMapTemp.behaviors.disable('drag');
   myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
  
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
@@ -261,7 +263,7 @@ function getTileContainer(layer) {
     if (layer.hasOwnProperty(k)) {
       if (
         layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
-        || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+        | layer[k] instanceof ymaps.layer.tileContainer.DomContainer
       ) {
         return layer[k];
       }
@@ -320,6 +322,15 @@ $(function() {
  
 });
 
+$(function(){
+
+  $('a[data-target="anchor"]').bind('click.smoothscroll', function(){
+    var target = $(this).attr('href'),
+        bl_top = $(target).offset().top - 80;
+    $('body, html').animate({scrollTop: bl_top}, 700);
+    return false;
+  });
+});
 
 
 });

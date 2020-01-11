@@ -657,7 +657,7 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 100px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/hero-bg.webp") no-repeat center/cover;
   height: 100vh;
   color: #ffffff;
 }
@@ -884,7 +884,7 @@ img {
   margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url(../img/video-bg.jpg) no-repeat center;
+  background: #131313 url(../img/video-bg.webp) no-repeat center;
 }
 
 .control__video::before {
@@ -964,7 +964,7 @@ label.invalid {
 }
 
 .footer {
-  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/footer-bg.webp") no-repeat center/cover;
   padding-top: 3rem;
   position: relative;
 }
@@ -1110,7 +1110,7 @@ label.invalid {
   max-width: 66.07rem;
   overflow: hidden;
   cursor: pointer;
-  background: url("../img/yandex-before-load-marker.png") #ffffff no-repeat;
+  background: url("../img/yandex-before-load-marker.webp") #ffffff no-repeat;
   background-position: center center;
   background-size: cover;
   -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
@@ -1664,3 +1664,4 @@ input.invalid {
     margin-top: 0.5rem;
   }
 }
+/*# sourceMappingURL=style.css.map */
